@@ -7,6 +7,7 @@ from .models import Sensor, Measurement
 from .serializers import SensorSerializer, MeasurementSerializer
 
 class SensorApiView(APIView):
+
     def get(self, request):
         sensors = Sensor.objects.all()
         ser = SensorSerializer(sensors, many=True)
